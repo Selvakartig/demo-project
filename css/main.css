@@ -1,0 +1,40 @@
+body{
+  background-color: seashell
+}
+img#skimg{
+  width: 75px;
+  height: 75px;
+  }
+a{
+  text-decoration: none;
+}
+h1{
+  display:inline-block;
+  margin-left: 38%;
+  padding: 5px;
+  }
+header{
+  border: 2px solid black;
+  padding: 5px;
+  margin: 5px;
+  }
+main{
+  border: 2px solid black;
+  padding: 5px;
+  margin: 5px;
+  }
+nav{
+  border: 2px solid black;
+  padding: 5px;
+  margin: 5px;
+  padding-left: 5%;
+  }
+footer{
+  border: 2px solid black;
+  padding: 5px;
+  margin: 5px;
+  }
+form#about{
+  border: 2px solid black;
+  padding: 10px;
+}
