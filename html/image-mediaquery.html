@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image with Media Query</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Images with media Query</h1>
+    </header>
+    <main>
+        <picture>
+            <source srcset="/images/spidy.jpeg" type="image/jpeg" media="(min-width:850px )">
+            <source srcset="/images/bat.jpg" type="image/jpg" media="(max-width:800px )">
+            <img src="/images/cap.jpg" alt="">
+        </picture>
+    </main>
+</body>
+</html>

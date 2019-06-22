@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Capture image/video/audio</title>
+</head>
+<body>
+    <header>
+        Capture demo <br><br>
+    </header>
+    <main>
+        <form action="#" id="form" enctype="multipart/form-data">
+            <label for="capture">Add File</label>
+            <input type="file" id="capture" accept="image/*,audio/*"capture multiple> <br><br>
+            <button type="submit">Submit</button> <br><br>
+        </form>
+
+        <p>
+            <img src="" id="img" alt="No image">
+        </p>    
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded' , (ev)=>{
+            let data = document.getElementById('capture');
+            
+            data.addEventListener('change', (ev)=>{
+                if(data.files[0].type.indexOf("image/")>-1)
+                {
+                    let img = document.getElementById('img');
+                    img.src = window.URL.createObjectURL(data.files[0]);
+                }
+            })
+        })
+    </script>
+</body>
+</html>
