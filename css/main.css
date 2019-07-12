@@ -1,40 +1,101 @@
+/*****************
+      Default 
+******************/
+
 body{
   background-color: seashell
 }
-img#skimg{
-  width: 75px;
-  height: 75px;
-  }
 a{
   text-decoration: none;
 }
 h1{
   display:inline-block;
-  margin-left: 38%;
+  margin: 1rem auto;
+  width: 95%;
   padding: 5px;
   }
 header{
   border: 2px solid black;
   padding: 5px;
-  margin: 5px;
+  margin: 1rem auto;
+  width: 92%;
   }
 main{
   border: 2px solid black;
   padding: 5px;
-  margin: 5px;
+  margin: 1rem auto;
+  width: 92%;
   }
 nav{
   border: 2px solid black;
   padding: 5px;
-  margin: 5px;
-  padding-left: 5%;
+  margin: 1rem auto;
+  width: 92%;
   }
 footer{
   border: 2px solid black;
   padding: 5px;
-  margin: 5px;
+  margin: 1rem auto;
+  width: 92%;
   }
-form#about{
-  border: 2px solid black;
-  padding: 10px;
+
+/*************** 
+      Image 
+****************/
+
+img#skimg{
+  width: 75px;
+  height: 75px;
+  }
+
+/************** 
+      Form 
+***************/
+form{
+  max-width: 1000px;
+}
+
+input,select,option,label,button,textarea{
+  padding: 0.2rem 1rem;
+  font-size: 0.8rem;
+  color: inherit;
+  border-radius: 20px;
+  outline:none;
+}
+
+.form-box{
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-box label{
+  display: none;
+}
+
+/******************
+    Media Query
+*******************/
+
+@media (min-width:500px){
+  .form-box label{
+    display: block;
+  }
+}
+
+@media (min-width:600px){
+  .form-box{
+    flex-direction: row;
+  }
+
+  .form-box label{
+    flex-basis: 5rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  .form-box #btn{
+    margin-left: 7rem;
+  }
+
 }

@@ -2,29 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-    width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>About Us</title>
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-        </ul>
+        <a href="index.html">Home</a>
     </nav>
     <header>
         <h1>Contact us</h1>
     </header>
     
-    <main>
-        <form id="about" action="" method="post"><br>
-            Name : <input type="text" name="name"><br><br>
-            Mobile no : <input type="text" name="mobile"><br><br>
-            Email : <input type="email" name="email" id=""><br><br>
-            Comment : <input type="text" name="comment"><br><br>
-            <input type="button" value="Submit">
-        </form>
+    <main >
+        <form id="about" action="#" method="post">
+            <div class="form-box">   
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name">
+            </div>
+            <div class="form-box">
+                <label for="cellnum">Mobile No</label>
+                <input type="tel" id="cellnum" name="mobile" placeholder="Mobile No">
+            </div>
+            <div class="form-box">
+                <label for="email">Email Id</label>
+                <input type="email" name="email" id="email" placeholder="Email Id">
+            </div>
+            <div class="form-box">
+                <label for="state">State</label>
+                <select name="state" id="state">
+                    <optgroup label="State">
+                        <option disabled selected>-- Select State --</option>
+                        <option value="tamilnadu">Tamil nadu</option>
+                        <option value="kerala">Kerala</option>
+                        <option value="andra">Andra pradesh</option>
+                        <option value="karnataka">Karnataka</option>
+                        <option value="maharastra">Maharastra</option>
+                        <option value="telungana">Telungana</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="form-box">
+                <label for="city">City</label>
+                <input type="text" id="city" list="cities" placeholder="City">
+            </div>
+            <div class="form-box">
+                <label for="comment">Comment</label>
+                <textarea name="comment" id="comment" cols="26" rows="4" placeholder="Comment"></textarea>
+            </div>
+            <div class="form-box">
+                <button id="btn" >Send</button>
+            </div>
+    </form>
+        <datalist id="cities">
+            <option value="Tirupur"></option>
+            <option value="Coimbatore"></option>
+            <option value="Erode"></option>
+            <option value="Madurai"></option>
+            <option value="Chennai"></option>
+        </datalist>
     </main>
 </body>
 </html>
