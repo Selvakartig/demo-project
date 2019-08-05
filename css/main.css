@@ -7,36 +7,47 @@ body{
 }
 a{
   text-decoration: none;
+  border-radius: 20px;
+  padding: 0.2rem;
+  background-color: aquamarine;
+  color: inherit;
 }
 h1{
-  display:inline-block;
   margin: 1rem auto;
-  width: 95%;
   padding: 5px;
   }
 header{
   border: 2px solid black;
   padding: 5px;
   margin: 1rem auto;
-  width: 92%;
+  width: 91vw;
   }
+
+.main-logo img{
+  float: left;
+  margin-left: 2%;
+}
+
+.main-logo h1{
+  margin-left: 45%;
+}
 main{
   border: 2px solid black;
   padding: 5px;
   margin: 1rem auto;
-  width: 92%;
+  width: 91vw;
   }
 nav{
   border: 2px solid black;
-  padding: 5px;
+  padding: 7px;
   margin: 1rem auto;
-  width: 92%;
+  width: 91vw;
   }
 footer{
   border: 2px solid black;
   padding: 5px;
   margin: 1rem auto;
-  width: 92%;
+  width: 91vw;
   }
 
 /*************** 
@@ -51,9 +62,6 @@ img#skimg{
 /************** 
       Form 
 ***************/
-form{
-  max-width: 1000px;
-}
 
 input,select,option,label,button,textarea{
   padding: 0.2rem 1rem;
@@ -76,10 +84,15 @@ input,select,option,label,button,textarea{
 /******************
     Media Query
 *******************/
-
+ 
 @media (min-width:500px){
   .form-box label{
     display: block;
+  }
+
+  .form-box select{
+    display: flex;
+    flex-basis: 15%;
   }
 }
 
@@ -98,4 +111,11 @@ input,select,option,label,button,textarea{
     margin-left: 7rem;
   }
 
+  .form-box select{
+    display: flex;
+    flex-basis: 15%;
+  }
+
 }
+
+

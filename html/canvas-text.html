@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Demo-Text</title>
+    <style>
+        #textcanvas{
+            border: 1px solid red;
+            margin: 1rem auto;
+            background-color: antiquewhite;
+            display: block;
+        }
+        p{
+            margin: 1rem auto;
+            text-align: center;
+        }
+        input{
+            width: 600px;
+            font-size: 2rem;
+            padding: 0.2rem 1rem;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="textcanvas"></canvas>
+    <p>
+        <input type="text" id="text" placeholder="Enter your message here" >
+    </p>
+</body>
+    <script>
+        let canvas, ctx, oldTxt, f;
+        document.addEventListener('DOMContentLoaded', (ev) => { 
+            canvas = document.getElementById('textcanvas');
+            ctx = canvas.getContext('2d');
+            canvas.width = 600;
+            canvas.height = 400;
+
+            drawText();
+            document.getElementById('text').addEventListener('input', drawText);
+
+        });
+
+        // const drawText = function(){
+            const drawText = () => {
+            ctx.font = `normal 30px timesnewroman`;
+            ctx.fillStyle = 'cornflowerblue';
+            ctx.strokeStyle = 'red';
+            //textAlign center, left, right, end, start
+            ctx.textAlign = 'start';  
+            //textBaseline top, hanging, middle, bottom,ideographic, alphabetic
+            ctx.textBaseline = 'alphabetic';
+            //direction ltr, rtl, inherit
+            ctx.direction = 'ltr';
+            
+            let txt = document.getElementById('text').value;
+            let metrics = ctx.measureText(oldTxt);
+            let w = metrics.width;
+            ctx.clearRect(50, 110, w, -50);
+            
+            if( txt == '' ){
+                txt = 'Please give me a message.';
+            }
+            ctx.strokeText(txt, 50, 100);
+            oldTxt = txt;
+            
+            ctx.fillStyle = '#999';
+            ctx.font = 'italic 20px Arial';
+            let m = `Message is ${w}px wide`;
+            ctx.clearRect(50, 160, 500, -30);
+            ctx.fillText(m, 50,150);
+        }
+    </script>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+        #canvas{
+            border: 1px solid red;
+            margin: 1rem auto;
+            background-color: antiquewhite;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+</body>
+
+<script>
+    let canvas, ctx;
+
+    document.addEventListener('DOMContentLoaded',(ev) => {
+        canvas = document.getElementById('canvas');
+        ctx = canvas.getContext('2d');
+        canvas.width = 600; 
+        canvas.height = 400;
+
+        // drawrect();
+         drawEllipse();
+    });
+
+    // const drawrect = function() {
+    //     ctx.rect(300,100,100,50);
+
+    //     ctx.strokeStyle = 'red';
+    //     ctx.lineWidth = 10;
+    //     ctx.fillStyle = 'lightblue';
+
+    //     ctx.fill();
+    //     ctx.stroke();
+    //     ctx.fill();
+
+    //     ctx.clearRect(350,100,50,25);
+    // }
+
+    const drawEllipse = function() {
+        ctx.beginPath();
+    // ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle, antiClockwise)
+        ctx.ellipse(200,200,50,50,0,0,(Math.PI*2),false);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(300,300,50,0,(Math.PI),false)       
+        ctx.fill();
+        ctx.stroke();
+    }
+</script>
+</html>
